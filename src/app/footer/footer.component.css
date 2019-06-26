@@ -1,0 +1,33 @@
+
+.footer{
+
+  height: 150px;
+  text-align: center;
+  background: #505659;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+}
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer i{
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  background: #393f42;
+  line-height: 35px;
+  border: 4px dashed #505659;
+  border-radius: 50%;
+}
+.face:hover{
+  background: #3b5998 !important;
+}
+.twitter:hover{
+  background: #00ACEE !important;
+}
+.youtube:hover{
+  background: #c4302b !important;
+}
+

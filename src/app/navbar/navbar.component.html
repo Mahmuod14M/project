@@ -1,0 +1,41 @@
+<div class="nav">
+  <img src="assets/img/logo.png" routerLink="/home">
+  <div>
+    <ul>
+      <li routerLink="/home">Home</li>
+      <li routerLink="/about">About</li>
+      <li routerLink="/gallery">Gallery</li>
+      <li routerLink="/account">
+
+        <span></span>
+      </li>
+      <li id="alert">Notifications <i class="fas fa-angle-down"></i> </li>
+      <li><button class="btn btn-primary" id="login"> LOGIN</button> </li>
+    </ul>
+  </div>
+</div>
+<!--Notifications-->
+<div class="notifications">
+  <div >
+  <h2>fruit</h2>
+  <p>Notifications</p>
+    <hr>
+  </div>
+</div>
+<!--login-->
+<div class="login" >
+  <form (ngSubmit)="logIn(myform)" #myform="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required>
+    </div>
+    <div class="btns">
+    <button type="submit" class="btn btn-primary mb-2" id="logInbtn">Log In</button>
+    <h2 class="btn btn-primary mb-2" id="jionUs" routerLink="/jionUs" >Join Us</h2>
+    </div>
+  </form>
+</div>
