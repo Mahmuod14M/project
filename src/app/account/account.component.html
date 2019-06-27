@@ -26,11 +26,13 @@
       <label>Type of crop</label>
       <select class="form-control">
         <option>please choose one</option>
-        <option>خيار</option>
-        <option>خيار</option>
+        <option *ngFor="let x of plants" [value]="x.id" >{{x.name}}</option>
       </select>
     </div>
-
+    <br>
+    <div class="mt-5">
+        <button class="btn btn-info ADD" type="submit" >ADD</button>
+    </div>
   </form>
 </div>
 <hr>

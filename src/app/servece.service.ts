@@ -10,7 +10,7 @@ const httpOptions = {
     'Content-Type': 'application/json',
   })
 };
-const BASE_URL = 'http://192.168.1.6:5000'
+const BASE_URL = 'http://192.168.1.3:5000';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +28,16 @@ export class ServeceService {
   signIn(payload): Observable<any> {
     return this.httpClient.post(
       BASE_URL + '/auth/login', payload, httpOptions
+    );
+  }
+  LogOut(): Observable<any> {
+    return this.httpClient.get(
+      BASE_URL + '/auth/logout', httpOptions
+    );
+  }
+  GetPlant(): Observable<any> {
+    return this.httpClient.get(
+      BASE_URL + '/plant', httpOptions
     );
   }
 }

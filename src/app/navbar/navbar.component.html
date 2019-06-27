@@ -7,10 +7,13 @@
       <li routerLink="/gallery">Gallery</li>
       <li routerLink="/account">
 
-        <span></span>
+        <span *ngIf="userData">{{userData.username}}</span>
       </li>
-      <li id="alert">Notifications <i class="fas fa-angle-down"></i> </li>
-      <li><button class="btn btn-primary" id="login"> LOGIN</button> </li>
+      <li id="alert" *ngIf="userData">Notifications <i class="fas fa-angle-down"></i> </li>
+      <li>
+        <button class="btn btn-primary" id="login" *ngIf="!userData" (click)="logInBtn()"> LOGIN</button>
+      </li>
+      <li><button class="btn btn-primary" id="logout" *ngIf="userData" (click)="logOutBtn()"> Log out</button> </li>
     </ul>
   </div>
 </div>
@@ -36,6 +39,7 @@
     <div class="btns">
     <button type="submit" class="btn btn-primary mb-2" id="logInbtn">Log In</button>
     <h2 class="btn btn-primary mb-2" id="jionUs" routerLink="/jionUs" >Join Us</h2>
+      <h2 class="btn btn-primary mb-2" id="close">Close</h2>
     </div>
   </form>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServeceService} from '../servece.service';
 
 @Component({
   selector: 'app-account',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-
-  constructor() { }
+plants: any[] = [];
+  constructor(private serveceService: ServeceService) {
+    this.serveceService.GetPlant().subscribe( data => {
+      this.plants = data;
+      console.log('plants' , this.plants);
+    });
+  }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
 }
