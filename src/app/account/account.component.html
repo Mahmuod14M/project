@@ -17,7 +17,7 @@
 <div class="text-center">
   <h3>Start Your Work</h3>
   <hr>
-  <form>
+  <form >
     <div>
       <label>Land Area</label>
       <input type="number" class="form-control" placeholder="Land Area">
@@ -26,7 +26,7 @@
       <label>Type of crop</label>
       <select class="form-control">
         <option>please choose one</option>
-        <option *ngFor="let x of plants" [value]="x.id" >{{x.name}}</option>
+        <option *ngFor="let x of plants" [value]="x.id"  >{{x.name}}</option>
       </select>
     </div>
     <br>

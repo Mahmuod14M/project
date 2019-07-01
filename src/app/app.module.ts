@@ -24,6 +24,7 @@ const appRoutes: Routes =
     {path: 'jionUs', component: JionUsComponent},
     {path: 'gallery', component: GalleryComponent},
     {path: 'account', component: AccountComponent},
+    {path: 'plants', component: ServeicesComponent},
 ]
 @NgModule({
   declarations: [

@@ -15,21 +15,22 @@ export class NavbarComponent implements OnInit {
     this.storageService.logIn(form);
   }
   constructor(private serveceService: ServeceService , private storageService: StorageService) { }
-  logInBtn() {
+ 
+  
+
+  ngOnInit() {
     $('#login').click(() => {
       $('.login').show(1000);
     });
-  }
-  logOutBtn() {
     $('#logout').click( () => {
       localStorage.removeItem('signData');
       this.serveceService.LogOut().subscribe(data => {
       });
     });
-  }
-
-  ngOnInit() {
-
+    $('#alert').click(() => {
+      $('.notifications').slideToggle(1000);
+    });
+   
     this.storageService.getUserObservable().subscribe({
       next: logIn => {
         this.logIn = JSON.parse(logIn);
@@ -44,9 +45,6 @@ export class NavbarComponent implements OnInit {
     window.scrollTo(0, 0);
     this.userData = JSON.parse(localStorage.getItem('signData'));
     console.log(this.userData);
-    $('#alert').click(() => {
-      $('.notifications').slideToggle(1000);
-    });
     $('#jionUs').click(() => {
       $('.login').hide(1000);
     });

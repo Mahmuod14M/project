@@ -7,11 +7,11 @@ import {ServeceService} from '../servece.service';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-plants: any[] = [];
+plants: any;
   constructor(private serveceService: ServeceService) {
     this.serveceService.GetPlant().subscribe( data => {
-      this.plants = data;
-      console.log('plants' , this.plants);
+      this.plants = data.plants;
+      console.log( this.plants);
     });
   }
 
