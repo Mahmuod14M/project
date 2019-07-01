@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
   logIn(form) {
     this.storageService.logIn(form);
+    window.location.reload();
   }
   constructor(private serveceService: ServeceService , private storageService: StorageService) { }
  

@@ -4,23 +4,22 @@ import {Observable} from 'rxjs';
 import {HttpHeaders} from '@angular/common/http';
 
 
-
 const httpOptions = {
   headers: new HttpHeaders({
-    'withCredentials': 'true',
     'Content-Type': 'application/json',
-  })
+  }),
+  withCredentials: true,
 };
-const BASE_URL = 'http://192.168.1.4:5000';
+const BASE_URL = 'http://192.168.1.11:5000';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServeceService {
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient ) {
   }
-
+  
   signUp(payload): Observable<any> {
     return this.httpClient.post(
       BASE_URL + '/user/singup', payload, httpOptions
@@ -37,8 +36,7 @@ export class ServeceService {
     );
   }
   GetPlant(): Observable<any> {
-    return this.httpClient.get(
-      BASE_URL + '/plant', httpOptions
-    );
+    return this.httpClient.get(BASE_URL + '/plant', httpOptions)
+    
   }
 }

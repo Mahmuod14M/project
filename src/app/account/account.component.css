@@ -54,7 +54,7 @@ h3{
 .sec2 .card{
   width: 250px;
   height: 350px;
-
+  opacity: 0;
   border: none;
   color: #fff;
 }

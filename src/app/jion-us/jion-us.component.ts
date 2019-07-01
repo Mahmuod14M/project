@@ -23,6 +23,7 @@ export class JionUsComponent implements OnInit {
   }
   USerRegister = (form)  => {
     this.storageService.register(form);
+    window.location.reload();
   }
 
   ngOnInit() {

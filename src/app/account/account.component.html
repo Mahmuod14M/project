@@ -18,15 +18,19 @@
   <h3>Start Your Work</h3>
   <hr>
   <form >
+
     <div>
       <label>Land Area</label>
-      <input type="number" class="form-control" placeholder="Land Area">
+      <input type="number" class="form-control" placeholder="Land Area"   required id="landArea">
     </div>
     <div>
       <label>Type of crop</label>
-      <select class="form-control">
+      <select class="form-control"   required  id="plants">
         <option>please choose one</option>
-        <option *ngFor="let x of plants" [value]="x.id"  >{{x.name}}</option>
+        <option>potato</option>
+        <option>okra</option>
+        <option>cucumber</option>
+        <!--<option *ngFor="let x of plants" [value]="x.id"  >{{x.name}}</option>-->
       </select>
     </div>
     <br>
@@ -40,18 +44,18 @@
 <hr>
 <div class="sec2">
 
-  <div class="card">
-<img src="assets/img/pi2.jpg" class="img-fluid">
+  <div class="card" id="card">
+<img src="assets/img/20.jpg" class="img-fluid">
     <div class="bg">
-      <h4> <span>Name : </span>  جوافه</h4>
+      <h4> <span>Name : </span>  {{plants}}</h4>
       <hr>
-      <h5> <span>Land Area : </span>  20M</h5>
+      <h5> <span>Land Area : </span>  {{landArea}} Acre</h5>
       <hr>
-      <h5> <span>Water Liters : </span>  20L</h5>
+      <h5> <span>Water Liters : </span>  {{acre}} L</h5>
       <hr>
-      <h5> <span>Fertilizer : </span>  مش عارف دا ايه</h5>
+      <h5> <span>Fertilizer : </span> {{Fertilizer}} L</h5>
       <hr>
-      <h5> <span>Days : </span>  120D</h5>
+      <h5> <span>Days : </span>  120 Days</h5>
     </div>
   </div>
 
